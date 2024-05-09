@@ -1,0 +1,109 @@
+
+.principal-avatar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 5rem auto 5rem;
+}
+
+.principal-avatar__content {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 23rem;
+    height: 23rem;
+    background-color: var(--red);
+    border-radius: 50%;
+    left: 12rem;
+}
+
+.principal-avatar__content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    outline: 3px dashed var(--red);
+    border-radius: 50%;
+    animation: turn-around 100s linear infinite;
+}
+
+.principal-avatar__content--secondary {
+    background-color: var(--darkblue);
+}
+
+.principal-avatar__content--secondary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    outline: 3px dashed var(--darkblue);
+    border-radius: 50%;
+    animation: turn-around 100s linear infinite;
+}
+
+.principal-avatar__content--secondary > .content__wrapper > .content__title,
+.principal-avatar__content--secondary > .content__wrapper > .content__text {
+    color: var(--black);
+}
+
+.principal-avatar__content > .content__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.principal-avatar__content > .content__wrapper > .content__title {
+    color: var(--white);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.principal-avatar__content > .content__wrapper > .content__text {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--white);
+}
+
+.principal-avatar > .principal-avatar__img {
+    position: relative;
+    bottom: 2rem;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    width: fit-content;
+    place-items: center;
+}
+
+.principal-avatar__img > .img__circle {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+
+.principal-avatar__img > .img {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    object-fit: cover;
+    transition: transform 120ms ease-in;
+}
+
+.principal-avatar__img:hover > .img {
+    transform: scale(1.4);
+}
+
+@keyframes turn-around {
+    from {
+        transform: rotateZ(0deg)
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}

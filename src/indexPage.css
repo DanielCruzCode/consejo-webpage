@@ -1,0 +1,98 @@
+
+.main-container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.subtitle {
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    max-width: 30rem;
+}
+
+.header {
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    color: var(--darkblue);
+    text-align: center;
+}
+
+.header__selection {
+    isolation: isolate;
+    position: relative;
+    animation: mark-text 300ms ease-in 2s forwards;
+}
+
+.header__selection::before {
+    content: "";
+    display: block;
+    background-color: var(--red);
+    position: absolute;
+    height: 100%;
+    left: -5%;
+    top: 0;
+    z-index: -1;
+    animation: mark 300ms ease-in 2s forwards;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    width: 80%;
+    max-width: 30rem;
+    margin: .5rem auto 0;
+}
+
+.separator__line {
+    flex-grow: 1;
+    border: 1px solid var(--grayishblue);
+    height: 1px;
+    width: 2rem;
+}
+
+
+.button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    appearance: none;
+    border: none;
+    background-color: var(--red);
+    border-radius: var(--rounded-1);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--white);
+}
+
+/*Animations*/
+
+@keyframes mark-text {
+    from {
+        color: var(--darkblue);
+    }
+    to {
+        color: var(--white);
+    }
+}
+
+@keyframes mark {
+    from {
+        width: 0;
+    }
+    to {
+        width: 110%;
+    }
+}

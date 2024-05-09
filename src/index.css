@@ -1,0 +1,71 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+:root {
+    --white: white;
+    --gray: #E5EAF0;
+    --black: #1E1E1E;
+    --darkblue: #2B2D42;
+    --grayishblue: #8D99AE;
+    --red: #EF233C;
+    --rounded-1: .7rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    color: var(--darkblue);
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--gray);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+
+/* Utility */
+.text-red {
+    color: var(--red);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: var(--rounded-1);
+    padding: 1rem;
+}
