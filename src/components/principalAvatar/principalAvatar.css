@@ -1,9 +1,10 @@
 
 .principal-avatar {
     position: relative;
+    right: 8rem;
     display: flex;
     align-items: center;
-    margin: 5rem auto 5rem;
+    margin: 5rem 0 5rem;
 }
 
 .principal-avatar__content {

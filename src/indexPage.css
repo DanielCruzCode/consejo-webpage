@@ -1,5 +1,8 @@
 
 .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 95%;
     margin: 0 auto;
     padding: 1rem 0;
@@ -75,6 +78,19 @@
     font-weight: 600;
     font-style: normal;
     color: var(--white);
+}
+
+.electoral-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;    
+    column-gap: 1rem;
+}
+
+@media (min-width: 1000px) {
+    .electoral-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /*Animations*/

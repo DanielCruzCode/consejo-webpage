@@ -15,7 +15,7 @@ export function Proposal() {
         Propuestas {show ? <ArrowUp /> : <ArrowDown />}
       </button>
       <article
-        className={`proposal__content ${show ? "" : "proposal__content--open"}`}
+        className={`proposal__content ${show ? "proposal__content--open" : ""}`}
       >
         <p>
           Establecer mecanismos de articulación con los representantes

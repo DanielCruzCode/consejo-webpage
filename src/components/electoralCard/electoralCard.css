@@ -1,0 +1,76 @@
+.electoral-card {
+    background-color: var(--white);   
+    border-radius: var(--rounded-1);
+    padding: 1rem;
+}
+
+.electoral-card__avatar-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.electoral-card__avatar {
+    border-radius: var(--rounded-1);
+    padding: 1rem;
+}
+
+.electoral-card__avatar--primary {
+    background-color: var(--red);   
+}
+
+.electoral-card__avatar--secondary {
+    background-color: var(--darkblue);   
+}
+
+.electoral-card__avatar > .principal-avatar__img {
+    position: relative;
+    bottom: 2rem;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    width: fit-content;
+    place-items: center;
+}
+
+.electoral-card__avatar .principal-avatar__img > .img__circle {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+
+.electoral-card__avatar .principal-avatar__img > .img {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    object-fit: cover;
+    transition: transform 120ms ease-in;
+}
+
+.electoral-card__avatar .principal-avatar__img:hover > .img {
+    transform: scale(1.4);
+}
+
+.electoral-card__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0 .5rem;
+}
+
+.electoral-card__footer > .electoral-card__title {
+    color: var(--darkblue);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.electoral-card__line {
+    height: 1px;
+    width: 70%;
+    border: 1px solid var(--grayishblue);
+}
